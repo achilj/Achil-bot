@@ -59,12 +59,12 @@ module.exports.run = async (bot, message, args) => {
  
         // Hier kijken we na als er wel iemand heeft meegedaan.
         if (peopleReacted.length == 0) {
-            return message.channel.send("Niemand heeft gewonnen dus in neem de prijs :).");
+            return message.channel.send("Niemand heeft gewonnen dus in neem de prijs :slight_smile:.");
         }
  
         // Tijdelijk kijken we na als er te wienig mensen hebben mee gedaan aan de wedstrijd.
         if (peopleReacted.length < winnerCount) {
-            return message.channel.send("Er zijn niet genoeg mensen daarom win ik :).");
+            return message.channel.send("Er zijn niet genoeg mensen daarom win ik :slight_smile:.");
         }
  
         // Voor het aantal winnaars dat we eerder hebben opgegeven gaan we een random nummer aanmaken en de user in een array zetten.
