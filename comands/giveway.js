@@ -30,6 +30,7 @@ module.exports.run = async (bot, message, args) => {
     var giveawayEmbed = new discord.RichEmbed()
         .setTitle("🎉 **GIVEAWAY** 🎉")
         .setFooter(`Vervalt: ${dateTime}`)
+        .setColor("#1a1a62")
         .setDescription(item);
  
     // Verzend embed en zet de reactie op de popper.
@@ -95,7 +96,7 @@ module.exports.run = async (bot, message, args) => {
  
         // Voor iedere winnaar gaan we een bericht sturen.
         for (var i = 0; i < winners.length; i++) {
-            message.channel.send("Gefeliciteerd " + winners[i] + `! :) **${item}**.`);
+            message.channel.send("Gefeliciteerd " + winners[i] + `! :slight_smile: **${item}**.`);
         }
  
     }, 1000 * time);

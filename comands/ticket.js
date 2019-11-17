@@ -32,6 +32,7 @@ module.exports.run = async (bot, message, args) => {
  
     var embedCreateTicket = new discord.RichEmbed()
         .setTitle("Hoi, " + message.author.username)
+        .setColor("#1a1a62")
         .setFooter("Support kanaal wordt gemaakt!");
  
     message.channel.send(embedCreateTicket);
