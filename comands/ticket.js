@@ -3,7 +3,7 @@ const discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
  
     // ID van de categorie van de tickets.
-    const categoryId = "644213232906534915";
+    const categoryId = "741452078144290866";
  
     // Verkrijg Gebruikersnaam
     var userName = message.author.username;
