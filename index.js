@@ -1,6 +1,8 @@
 const discord = require("discord.js");
 const botConfig = require("./botconfig.json");
 
+bot.login(process.env.token);
+
 const fs = require("fs");
 
 const bot = new discord.Client();
@@ -74,5 +76,3 @@ bot.on("guildMemberAdd", member => {
     channel.send(joinEmbed);
  
 });
-
-bot.login(process.env.token);
