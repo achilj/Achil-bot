@@ -10,8 +10,8 @@ module.exports.run = async (bot, message, args) => {
         .setColor("#FF0000")
         .setThumbnail("https://cdn.discordapp.com/icons/302453258100670465/ccda5964ec02251300c46fa8b3d9f6ac.png")
         .addField("IP: **dewijnpers.serv.nu**")
-        .setFooter("Made By DE WIJNPERS")
-        .setTimestamp("Now")
+        .addField("Gemaakt op:", bot.user.createdAt)
+        .setFooter("Made By DE WIJNPERS");
 
     return message.channel.send(serverEmbed);
 
