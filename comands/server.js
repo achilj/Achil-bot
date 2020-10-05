@@ -2,7 +2,6 @@ const discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
-    return message.channel.send("Wij **ACHILCRAFT** spelen op de wijnpers 2020-2021 server. \n ip:  ");
     var icon = message.guild.iconURL;
 
     var serverEmbed = new discord.RichEmbed()
