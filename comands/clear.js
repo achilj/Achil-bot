@@ -15,15 +15,15 @@ module.exports.run = async (bot, message, args) => {
 
          if (args[0] == 0) {
 
-              message.reply(`Ben je loemp ik kan toch niet 0 berichten verwijderen?`).then(msg => msg.delete({timeout: 3000}));
+              message.reply(`Ben je loemp ik kan toch niet 0 berichten verwijderen?`).then(msg => msg.delete({timeout: 30000}));
             
            } else if (args[0] == 1) {
         
-               message.reply(`Ik heb 1 bericht verwijderd.`).then(msg => msg.delete({timeout: 3000}));
+               message.reply(`Ik heb 1 bericht verwijderd.`).then(msg => msg.delete({timeout: 30000}));
         
           } else {
         
-              message.reply(`Ik heb ${args[0]} berichten verwijderd.`).then(msg => msg.delete({timeout: 3000}));
+              message.reply(`Ik heb ${args[0]} berichten verwijderd.`).then(msg => msg.delete({timeout: 30000}));
         
           }
 
