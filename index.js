@@ -1,8 +1,6 @@
 const discord = require("discord.js");
 const botConfig = require("./botconfig.json");
 
-bot.login(process.env.token);
-
 const fs = require("fs");
 
 const bot = new discord.Client();
@@ -61,18 +59,5 @@ bot.on("message", async message => {
 
 });
 
-bot.on("guildMemberAdd", member => {
- 
-    const channel = member.guild.channels.find("name", "welkom");
-    if (!channel) console.log("Kan het kanaal niet vinden.");
- 
-    var joinEmbed = new discord.RichEmbed()
-        .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
-        .setDescription(`Hoi ${member.user.username}, **Welkom op de server**. Hier nog meer uitleg.`)
-        .setColor("#00FF00")
-        .setTimestamp()
-        .setFooter("Gebruiker gejoined.");
- 
-    channel.send(joinEmbed);
- 
-});
+
+bot.login(process.env.token);
