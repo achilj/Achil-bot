@@ -36,6 +36,21 @@ bot.on("ready", async () => {
 
 });
 
+bot.on("guildMemberAdd", member => {
+
+    var role = member.guild.roles.find("name", "🔮 | GAST");
+
+    if (!role) return;
+
+    member.addRole(role);
+
+    const channel = member.guild.channels.find("name", "👋🏻welkom");
+
+    if(!channel) return;
+
+    channel.send(`Welkom in de **ACHILCRAFT** server ${member}`);
+
+});
 
 bot.on("message", async message => {
 
