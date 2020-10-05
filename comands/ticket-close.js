@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
  
     // Vind kanaal voor de logs.
     var logChannel = message.guild.channels.find("name", "log");
-    if (!logChannel) return message.channel.send("Kanaal bestaat niet");
+    if (!logChannel) return message.channel.send("er bestaat geen **__log kannaal!__**");
  
     logChannel.send(embedCloseTicket);
  
