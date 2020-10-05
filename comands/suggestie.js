@@ -7,6 +7,9 @@ module.exports.run = async (bot, message, args) => {
  
     // Kijk na als er een idee is meegegeven.
     if (!idee) return message.channel.send("Geen suggestie meegegeven. Typ die er snel achter❤");
+    
+    //verwijderd bericht.
+    message.delete();
  
     // Maak het embed aan.
     var ideeEmbed = new discord.RichEmbed()
