@@ -2,26 +2,36 @@ const discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
-    //clear (aantal) 14
+    // !clear aantal
+    if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Je hebt geen toestemming");
+    
+    if (!args[0]) return message.reply("Geef een aantal op dat je weg wilt halen");
 
-    if(!message.member.hasPremissions("MANAGE_MESSAGES")) return message.reply("Je hebt hier geen pers voor!");
+    if (Number.isInteger(parseInt(args[0]))) {
 
-    if(!args[0]) return message.reply("Geef een aantal op a.u.b.");
+       var aantal = parseInt(args[0]) + 1;
 
-    if(Number.isInteger(parseInt(args[0]))) {
+       message.channel.bulkDelete(aantal).then(() => { 
+
+         if (args[0] == 0) {
+
+              message.reply(`Ben je loemp ik kan toch niet 0 berichten verwijderen?`).then(msg => msg.delete({timeout: 3000}));
+            
+           } else if (args[0] == 1) {
         
-        var amount = parseInt(args[0]) + 1;
+               message.reply(`Ik heb 1 bericht verwijderd.`).then(msg => msg.delete({timeout: 3000}));
+        
+          } else {
+        
+              message.reply(`Ik heb ${args[0]} berichten verwijderd.`).then(msg => msg.delete({timeout: 3000}));
+        
+          }
 
-        message.channel.bulkDelete(amount).then(() => {
-
-            message.channel.send(`Ik heb ${args[0]} berichten verwijderd!`).then(msg => msg.delete(3000));
-
-        });
+      });
 
     } else {
-        return message.channel.send("Geef een **getal** op");
+        return message.reply("Geef een getal op.");
     }
-
 
 }
 
