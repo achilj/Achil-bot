@@ -1,6 +1,6 @@
 module.exports.run = async (bot, message, args) => {
 
-    message.channel.send("**PONG:**" + (Date.now() - message.createdTimestamp) + "**ms**");
+    message.channel.send("**PONG: **" + (Date.now() - message.createdTimestamp) + "**ms**");
 
 }
 
