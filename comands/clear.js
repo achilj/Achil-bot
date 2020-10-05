@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
 
         message.channel.bulkDelete(amount).then(() => {
 
-            message.channel.send(`Ik heb ${amount} berichten verwijderd!`).then(msg => msg.delete(3000));
+            message.channel.send(`Ik heb ${args[0]} berichten verwijderd!`).then(msg => msg.delete(3000));
 
         });
 
@@ -26,5 +26,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "botinfo"
+    name: "clear"
 }
