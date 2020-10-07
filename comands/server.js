@@ -11,6 +11,7 @@ module.exports.run = async (bot, message, args) => {
         .setDescription("2020-2021")
         .setColor("#FF0000")
         .addField("IP ADRES:", "dewijnpers.serv.nu")
+        .addField("DISCORD:", "https://invite.gg/dewijnpers")
         .setThumbnail("https://cdn.discordapp.com/icons/302453258100670465/ccda5964ec02251300c46fa8b3d9f6ac.png")
         .setFooter("Made By DE WIJNPERS");
 
