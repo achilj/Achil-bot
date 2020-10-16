@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
         .addField("Ingezonden door: ", message.author);
  
     // Vind het kanaal.
-    var ideeChannel = message.guild.channels.find(`name`, "suggestie");
+    var ideeChannel = message.guild.channels.find(`name`, "📒suggestie");
     if (!ideeChannel) return message.guild.send("Kan het kanaal niet vinden");
  
     // Verzend het bericht en voeg er reacties aan toe.
