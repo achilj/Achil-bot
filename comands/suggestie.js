@@ -13,10 +13,12 @@ module.exports.run = async (bot, message, args) => {
  
     // Maak het embed aan.
     var ideeEmbed = new discord.RichEmbed()
-        .setTitle("Suggestie")
+        .setTitle("Suggestie van ", message.author)
         .setColor("#00FF00")
         .addField("Suggestie: ", idee)
-        .addField("Ingezonden door: ", message.author);
+        .addField("Ingezonden door: ", message.author)
+        .setTimestamp()
+       	.setFooter('❤AchilCraft❤', 'https://media.discordapp.net/attachments/629335056095117312/738467710828150795/AchilCraftStudios_Development__logo.png');
  
     // Vind het kanaal.
     var ideeChannel = message.guild.channels.find(`name`, "📒suggestie");
